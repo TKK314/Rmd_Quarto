@@ -4,7 +4,7 @@
     "href": "tips.html",
     "title": "TIPS",
     "section": "",
-    "text": "以下のサイトに非常にわかりやすくまとまっているので、ぜひご覧ください。\nhttps://www.jaysong.net/RBook/quarto.html\n特に有能だと思ったものについて下記に記載します。\n\n\n\nRmdファイルと同様にスラッシュコマンドでcalloutを作成できる。\nRmdに入っているものよりも見た目が良い\n\n\n\n\n\n\nタイトルも設定できます\n\n\n\nnoteを設定した場合のcalloutはこんな感じで表示されます\n\n\n\n\n\n\n\n\nsimpleな見た目バージョン\n\n\n\n\nappearanceの設定をsimpleにするとタイトル部分がシンプルになります\n\n\n\n\n\n\n\n\n折りたたみ設定\n\n\n\n\n\n\nattributesでcollapse=“true”を入れると折りたたみにできます\n\n\n\n\n\n\n::::{.columns}\n:::{.column width=56%}\n**コード:**\n\n::: {.cell}\n\n```{.r .cell-code}\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n```\n:::\n:::\n\n:::{.column width=2%}\n:::\n\n:::{.column width=42%}\n**結果:**\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n```\n\n\n:::\n:::\n:::\n::::\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n\n\n\n\n\n\n\n\nlibrary(datasets)",
+    "text": "以下のサイトに非常にわかりやすくまとまっているので、ぜひご覧ください。\nhttps://www.jaysong.net/RBook/quarto.html\n特に有能だと思ったものについて下記に記載します。\n\n\n\nRmdファイルと同様にスラッシュコマンドでcalloutを作成できる。\nRmdに入っているものよりも見た目が良い\n\n\n\n\n\n\nタイトルも設定できます\n\n\n\nnoteを設定した場合のcalloutはこんな感じで表示されます\n\n\n\n\n\n\n\n\nsimpleな見た目バージョン\n\n\n\n\nappearanceの設定をsimpleにするとタイトル部分がシンプルになります\n\n\n\n\n\n\n\n\n折りたたみ設定\n\n\n\n\n\n\nattributesでcollapse=“true”を入れると折りたたみにできます\n\n\n\n\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n\n\n\n\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n\n\n\n\n\n\n\n以下のようにknitrを用いることでhtml形式でtableを出力でき、webページにした時に見た目が良くなる\n\nlibrary(datasets)\nlibrary(tidyverse)\niris %&gt;% \n  head() %&gt;% \n  knitr::kable(format = \"html\", digits = 5, align = \"c\",\n               caption = \"sample table\")\n\n\n\nsample table\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\n\n\n\n通常のようにdata.frameを出力すると以下のようになってしまう\n\niris %&gt;% head()\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa",
     "crumbs": [
       "Home",
       "TIPS"
@@ -26,7 +26,7 @@
     "href": "tips.html#段組み",
     "title": "TIPS",
     "section": "",
-    "text": "::::{.columns}\n:::{.column width=56%}\n**コード:**\n\n::: {.cell}\n\n```{.r .cell-code}\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n```\n:::\n:::\n\n:::{.column width=2%}\n:::\n\n:::{.column width=42%}\n**結果:**\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n```\n\n\n:::\n:::\n:::\n::::\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"",
+    "text": "コード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n\n\n\n\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"",
     "crumbs": [
       "Home",
       "TIPS"
@@ -37,18 +37,11 @@
     "href": "tips.html#rのtable出力",
     "title": "TIPS",
     "section": "",
-    "text": "library(datasets)",
+    "text": "以下のようにknitrを用いることでhtml形式でtableを出力でき、webページにした時に見た目が良くなる\n\nlibrary(datasets)\nlibrary(tidyverse)\niris %&gt;% \n  head() %&gt;% \n  knitr::kable(format = \"html\", digits = 5, align = \"c\",\n               caption = \"sample table\")\n\n\n\nsample table\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\n\n\n\n通常のようにdata.frameを出力すると以下のようになってしまう\n\niris %&gt;% head()\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa",
     "crumbs": [
       "Home",
       "TIPS"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "create_dataset.html",
@@ -87,14 +80,11 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "quarto",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Quartoを用いて作ったサイトです。\n公式サイトはこちらです→https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nqmdファイルを用いて作成していますが、Rmdファイルとほとんど書き方は同じです。なんならコピペでも大丈夫。",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "contributors.html",
@@ -105,6 +95,16 @@
     "crumbs": [
       "Home",
       "Contributors"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto",
+    "section": "",
+    "text": "Quartoを用いて作ったサイトです。\n公式サイトはこちらです→https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nqmdファイルを用いて作成していますが、Rmdファイルとほとんど書き方は同じです。なんならコピペでも大丈夫。",
+    "crumbs": [
+      "Home"
     ]
   }
 ]

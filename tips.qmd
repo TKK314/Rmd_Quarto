@@ -52,9 +52,8 @@ attributesでcollapse="true"を入れると折りたたみにできます
 
 ## 段組み
 
-```` r
-::::{.columns}
-:::{.column width=56%}
+::: columns
+::: {.column width="56%"}
 **コード:**
 
 ```{r}
@@ -66,10 +65,10 @@ paste0(x, y)
 ```
 :::
 
-:::{.column width=2%}
+::: {.column width="2%"}
 :::
 
-:::{.column width=42%}
+::: {.column width="42%"}
 **結果:**
 
 ```{r}
@@ -80,8 +79,7 @@ y <- c("A", "A", "A", "B", "B")
 paste0(x, y)
 ```
 :::
-::::
-````
+:::
 
 上記のように記載することで、横並びにすることができる
 
@@ -120,6 +118,33 @@ paste0(x, y)
 
 ## Rのtable出力
 
+以下のように`knitr`を用いることでhtml形式でtableを出力でき、webページにした時に見た目が良くなる
+
 ```{r}
+#| message: false
+#| warning: false
 library(datasets)
+library(tidyverse)
+iris %>% 
+  head() %>% 
+  knitr::kable(format = "html", digits = 5, align = "c",
+               caption = "sample table")
 ```
+
+通常のようにdata.frameを出力すると以下のようになってしまう
+
+```{r}
+iris %>% head()
+```
+
+# メッセージや警告を消す
+
+Rコードを普通に書くとlibrary読み込み時にメッセージが多く出ることがあり、webページでは邪魔
+
+``` r
+{r}
+#| message: false
+#| warning: false
+```
+
+これを記載することで削除することができる
