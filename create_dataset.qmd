@@ -36,6 +36,16 @@ link-external-newwindow: true #リンクが別タブで開く
 
 ## 基本
 
+``` r
+{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(sas7bdat)
+```
+
+上記のように# \|で各rコードチャンクの設定を変更できます。
+
 ```{r}
 #| message: false
 #| warning: false
@@ -43,9 +53,15 @@ library(tidyverse)
 library(sas7bdat)
 ```
 
-上記のようにな# \|で各rコードチャンクの設定を変更できます。
-
 ## 各コードチャンクで設定する
+
+``` r
+{r}
+#| message: false
+#| warning: false
+#| code-fold: false
+1+1
+```
 
 ```{r}
 #| message: false

@@ -60,7 +60,7 @@
     "href": "create_dataset.html#基本",
     "title": "データセット作成",
     "section": "1.1 基本",
-    "text": "1.1 基本\n\n\nCode\nlibrary(tidyverse)\nlibrary(sas7bdat)\n\n\n上記のようにな# |で各rコードチャンクの設定を変更できます。",
+    "text": "1.1 基本\n{r}\n#| message: false\n#| warning: false\nlibrary(tidyverse)\nlibrary(sas7bdat)\n上記のように# |で各rコードチャンクの設定を変更できます。\n\n\nCode\nlibrary(tidyverse)\nlibrary(sas7bdat)",
     "crumbs": [
       "Home",
       "R",
@@ -72,7 +72,7 @@
     "href": "create_dataset.html#各コードチャンクで設定する",
     "title": "データセット作成",
     "section": "1.2 各コードチャンクで設定する",
-    "text": "1.2 各コードチャンクで設定する\n\n1+1\n\n[1] 2\n\n\ncode-foldをfalseにしておけば、yaml部分でtrueにしていてもこっちの設定が優先されるので、コードは開いたままになります。",
+    "text": "1.2 各コードチャンクで設定する\n{r}\n#| message: false\n#| warning: false\n#| code-fold: false\n1+1\n\n1+1\n\n[1] 2\n\n\ncode-foldをfalseにしておけば、yaml部分でtrueにしていてもこっちの設定が優先されるので、コードは開いたままになります。",
     "crumbs": [
       "Home",
       "R",
