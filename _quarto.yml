@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs #github pagesで必須
+
+website:
+  title: "quarto"
+  site-url: "" #トップページのURLを入れる
+  page-navigation: true
+
+  page-footer: #フッターの設定
+    right: ""
+    left:
+      - icon: github
+        href: "" #githubのリポジトリURLなどを入れる
+      - icon: globe
+        href: "" #公開しているサイトのURLなどを入れる
+    background: "#AAB1B3"
+
+
+  navbar: #上のバーに記載する内容の設定
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  sidebar: #サイドバーに記載する内容の設定
+    logo: "images/logo.png" #ロゴを設定可能
+    pinned: true
+    align: center
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents: #サイドバーのコンテンツ
+      - text: "Home"
+        file: index.qmd
+      - text: "Contributors"
+        file: contributors.qmd
+      - section: "R" #ネストできる
+        contents:
+          - create_dataset.qmd
+      - tips.qmd
+
+format:
+  html:
+    page-layout: article
+    theme: zephyr #cosmo #sketchy #quartz #morph #lumen #sandstone #zephyr
+    css: styles.css
+    code_folding: hide #hide #true #false
+    toc: true
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+editor: visual

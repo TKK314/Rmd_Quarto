@@ -1,0 +1,125 @@
+---
+title: "TIPS"
+format:
+  html:
+    code-fold: false
+    code-summary: "Code"
+    code-tools: true
+    number-sections: true
+    toc-depth: 5
+editor_options:
+  chunk_output_type: console
+link-external-newwindow: true
+---
+
+# Quarto特有の便利な書き方
+
+以下のサイトに非常にわかりやすくまとまっているので、ぜひご覧ください。
+
+<https://www.jaysong.net/RBook/quarto.html>
+
+特に有能だと思ったものについて下記に記載します。
+
+## コールアウト
+
+![](images/スクリーンショット%202024-05-26%2015.06.51.png){width="400"}
+
+Rmdファイルと同様にスラッシュコマンドでcalloutを作成できる。
+
+Rmdに入っているものよりも見た目が良い
+
+::: callout-note
+## タイトルも設定できます
+
+noteを設定した場合のcalloutはこんな感じで表示されます
+:::
+
+::: {.callout-note appearance="simple"}
+## simpleな見た目バージョン
+
+![](images/スクリーンショット%202024-05-26%2015.08.48.png){width="400"}
+
+appearanceの設定をsimpleにするとタイトル部分がシンプルになります
+:::
+
+::: {.callout-important collapse="true"}
+## 折りたたみ設定
+
+![](images/スクリーンショット%202024-05-26%2015.11.56.png){width="400"}
+
+attributesでcollapse="true"を入れると折りたたみにできます
+:::
+
+## 段組み
+
+```` r
+::::{.columns}
+:::{.column width=56%}
+**コード:**
+
+```{r}
+#| eval: false
+x <- c(1, 2, 3, 1, 2)
+y <- c("A", "A", "A", "B", "B")
+
+paste0(x, y)
+```
+:::
+
+:::{.column width=2%}
+:::
+
+:::{.column width=42%}
+**結果:**
+
+```{r}
+#| echo: false
+x <- c(1, 2, 3, 1, 2)
+y <- c("A", "A", "A", "B", "B")
+
+paste0(x, y)
+```
+:::
+::::
+````
+
+上記のように記載することで、横並びにすることができる
+
+-   結果のみを右側に出力することも可能
+
+    -   同じコードを記載して、`eval: false`で実行しない、`echo: false`でコードを表示しないというふうにできる
+
+::: columns
+::: {.column width="56%"}
+**コード:**
+
+```{r}
+#| eval: false
+x <- c(1, 2, 3, 1, 2)
+y <- c("A", "A", "A", "B", "B")
+
+paste0(x, y)
+```
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="42%"}
+**結果:**
+
+```{r}
+#| echo: false
+x <- c(1, 2, 3, 1, 2)
+y <- c("A", "A", "A", "B", "B")
+
+paste0(x, y)
+```
+:::
+:::
+
+## Rのtable出力
+
+```{r}
+library(datasets)
+```

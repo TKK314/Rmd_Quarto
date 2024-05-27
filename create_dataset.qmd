@@ -1,0 +1,57 @@
+---
+title: "データセット作成"
+format:
+  html:
+    code-fold: true
+    code-summary: "Code"
+    code-tools: true
+    number-sections: true
+    toc-depth: 5
+editor_options:
+  chunk_output_type: console
+link-external-newwindow: true
+---
+
+メターデータを以下のように設定しておくと便利です。
+
+titleを設定することで、sidevarやページ上部に表示されるタイトルを変更できます
+
+``` yaml
+---
+title: "データセット作成"
+format:
+  html:
+    code-fold: true #コードの自動折り畳み（クリックで表示できる）
+    code-summary: "Code"
+    code-tools: true
+    number-sections: true
+    toc-depth: 5
+editor_options:
+  chunk_output_type: console
+link-external-newwindow: true #リンクが別タブで開く
+---
+```
+
+# コードチャンクの設定について
+
+## 基本
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(sas7bdat)
+```
+
+上記のようにな# \|で各rコードチャンクの設定を変更できます。
+
+## 各コードチャンクで設定する
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: false
+1+1
+```
+
+`code-fold`をfalseにしておけば、yaml部分でtrueにしていてもこっちの設定が優先されるので、コードは開いたままになります。

@@ -1,0 +1,20 @@
+---
+title: "About the Authors"
+toc: false
+---
+
+#### ペンギン
+
+::: {layout="[[0.3,1]]"}
+![](images/penguin.png){fig-align="left"}
+
+ペンギンです。こんな感じで横並びで写真と画像を設置することができます。
+:::
+
+#### アザラシ
+
+::: {layout="[[0.3,1]]"}
+![](images/azarashi.png){fig-align="left"}
+
+アザラシです。いらすとやの画像かわいいですよね。
+:::

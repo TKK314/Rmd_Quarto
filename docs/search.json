@@ -1,0 +1,110 @@
+[
+  {
+    "objectID": "tips.html",
+    "href": "tips.html",
+    "title": "TIPS",
+    "section": "",
+    "text": "以下のサイトに非常にわかりやすくまとまっているので、ぜひご覧ください。\nhttps://www.jaysong.net/RBook/quarto.html\n特に有能だと思ったものについて下記に記載します。\n\n\n\nRmdファイルと同様にスラッシュコマンドでcalloutを作成できる。\nRmdに入っているものよりも見た目が良い\n\n\n\n\n\n\nタイトルも設定できます\n\n\n\nnoteを設定した場合のcalloutはこんな感じで表示されます\n\n\n\n\n\n\n\n\nsimpleな見た目バージョン\n\n\n\n\nappearanceの設定をsimpleにするとタイトル部分がシンプルになります\n\n\n\n\n\n\n\n\n折りたたみ設定\n\n\n\n\n\n\nattributesでcollapse=“true”を入れると折りたたみにできます\n\n\n\n\n\n\n::::{.columns}\n:::{.column width=56%}\n**コード:**\n\n::: {.cell}\n\n```{.r .cell-code}\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n```\n:::\n:::\n\n:::{.column width=2%}\n:::\n\n:::{.column width=42%}\n**結果:**\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n```\n\n\n:::\n:::\n:::\n::::\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n\n\n\n\n\n\n\n\nlibrary(datasets)",
+    "crumbs": [
+      "Home",
+      "TIPS"
+    ]
+  },
+  {
+    "objectID": "tips.html#コールアウト",
+    "href": "tips.html#コールアウト",
+    "title": "TIPS",
+    "section": "",
+    "text": "Rmdファイルと同様にスラッシュコマンドでcalloutを作成できる。\nRmdに入っているものよりも見た目が良い\n\n\n\n\n\n\nタイトルも設定できます\n\n\n\nnoteを設定した場合のcalloutはこんな感じで表示されます\n\n\n\n\n\n\n\n\nsimpleな見た目バージョン\n\n\n\n\nappearanceの設定をsimpleにするとタイトル部分がシンプルになります\n\n\n\n\n\n\n\n\n折りたたみ設定\n\n\n\n\n\n\nattributesでcollapse=“true”を入れると折りたたみにできます",
+    "crumbs": [
+      "Home",
+      "TIPS"
+    ]
+  },
+  {
+    "objectID": "tips.html#段組み",
+    "href": "tips.html#段組み",
+    "title": "TIPS",
+    "section": "",
+    "text": "::::{.columns}\n:::{.column width=56%}\n**コード:**\n\n::: {.cell}\n\n```{.r .cell-code}\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n```\n:::\n:::\n\n:::{.column width=2%}\n:::\n\n:::{.column width=42%}\n**結果:**\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"\n```\n\n\n:::\n:::\n:::\n::::\n上記のように記載することで、横並びにすることができる\n\n結果のみを右側に出力することも可能\n\n同じコードを記載して、eval: falseで実行しない、echo: falseでコードを表示しないというふうにできる\n\n\n\n\nコード:\n\nx &lt;- c(1, 2, 3, 1, 2)\ny &lt;- c(\"A\", \"A\", \"A\", \"B\", \"B\")\n\npaste0(x, y)\n\n\n\n\n結果:\n\n\n[1] \"1A\" \"2A\" \"3A\" \"1B\" \"2B\"",
+    "crumbs": [
+      "Home",
+      "TIPS"
+    ]
+  },
+  {
+    "objectID": "tips.html#rのtable出力",
+    "href": "tips.html#rのtable出力",
+    "title": "TIPS",
+    "section": "",
+    "text": "library(datasets)",
+    "crumbs": [
+      "Home",
+      "TIPS"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "create_dataset.html",
+    "href": "create_dataset.html",
+    "title": "データセット作成",
+    "section": "",
+    "text": "メターデータを以下のように設定しておくと便利です。\ntitleを設定することで、sidevarやページ上部に表示されるタイトルを変更できます",
+    "crumbs": [
+      "Home",
+      "R",
+      "データセット作成"
+    ]
+  },
+  {
+    "objectID": "create_dataset.html#基本",
+    "href": "create_dataset.html#基本",
+    "title": "データセット作成",
+    "section": "1.1 基本",
+    "text": "1.1 基本\n\n\nCode\nlibrary(tidyverse)\nlibrary(sas7bdat)\n\n\n上記のようにな# |で各rコードチャンクの設定を変更できます。",
+    "crumbs": [
+      "Home",
+      "R",
+      "データセット作成"
+    ]
+  },
+  {
+    "objectID": "create_dataset.html#各コードチャンクで設定する",
+    "href": "create_dataset.html#各コードチャンクで設定する",
+    "title": "データセット作成",
+    "section": "1.2 各コードチャンクで設定する",
+    "text": "1.2 各コードチャンクで設定する\n\n1+1\n\n[1] 2\n\n\ncode-foldをfalseにしておけば、yaml部分でtrueにしていてもこっちの設定が優先されるので、コードは開いたままになります。",
+    "crumbs": [
+      "Home",
+      "R",
+      "データセット作成"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto",
+    "section": "",
+    "text": "Quartoを用いて作ったサイトです。\n公式サイトはこちらです→https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nqmdファイルを用いて作成していますが、Rmdファイルとほとんど書き方は同じです。なんならコピペでも大丈夫。",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "contributors.html",
+    "href": "contributors.html",
+    "title": "About the Authors",
+    "section": "",
+    "text": "ペンギン\n\n\n\n\n\n\n\n\n\n\n\n\n\nペンギンです。こんな感じで横並びで写真と画像を設置することができます。\n\n\n\n\n\nアザラシ\n\n\n\n\n\n\n\n\n\n\n\n\n\nアザラシです。いらすとやの画像かわいいですよね。",
+    "crumbs": [
+      "Home",
+      "Contributors"
+    ]
+  }
+]
